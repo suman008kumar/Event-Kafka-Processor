@@ -18,7 +18,7 @@ public class EventMessage {
     @Column(name="received_at")
     private LocalDateTime receivedAt;
 
-    // getters and setters
+    // get and set method
     public Long getId(){return id;}
     public void setId(Long id){this.id=id;}
     public String getTopicName(){return topicName;}
