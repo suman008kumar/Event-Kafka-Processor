@@ -5,7 +5,7 @@ function App() {
   const [message, setMessage] = useState("");
   const [events, setEvents] = useState([]);
 
-  // GET all events from DB
+  
   const loadEvents = async () => {
     try {
       const res = await fetch("http://localhost:8080/api/events");
@@ -16,7 +16,7 @@ function App() {
     }
   };
 
-  // POST message to Kafka
+  
   const sendMessage = async () => {
     try {
       await fetch(`http://localhost:8080/api/test/send/${topic}`, {
@@ -27,7 +27,7 @@ function App() {
 
       alert("Message Sent!");
 
-      // after sending → refresh event list
+      
       loadEvents();
     } catch (err) {
       console.error("Send Message Error:", err);
@@ -70,7 +70,7 @@ function App() {
         Reload
       </button>
 
-      {/* Events List */}
+      
       <ul>
         {events.length === 0 ? (
           <p>No events found.</p>
