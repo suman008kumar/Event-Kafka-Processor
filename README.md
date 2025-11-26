@@ -29,7 +29,4 @@ and how the frontend interacts with backend APIs.
 
 - Apache Kafka (Producer + Consumer)
 
----
-
-## 📁 Project Structure
 
